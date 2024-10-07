@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+    <link rel="stylesheet" href="scheduling.css">
+</head>
+<body>
+    <header>
+        <h1 class="platform-name">Teletherapyou</h1>
+    </header>
+    
+    <div class="scheduling-container">
+        <h2 id="appointment-header">Schedule an Appointment with <span id="doctor-name"></span></h2>
+        <form class="scheduling-form" id="appointment-form">
+            <input type="text" id="patient-name" placeholder="Your Name" required>
+            <input type="email" id="patient-email" placeholder="Your Email" required>
+            <input type="tel" id="patient-phone" placeholder="Your Phone" required>
+            <select id="date-select" required>
+                <option value="">Select a Date</option>
+                <option value="2024-10-01">October 1, 2024</option>
+                <option value="2024-10-02">October 2, 2024</option>
+                <option value="2024-10-03">October 3, 2024</option>
+            </select>
+            <select id="time-select" required>
+                <option value="">Select a Time Slot</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+            </select>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="confirmation-message" style="display:none; text-align:center; margin-top:20px;"></div>
+    </div>
+
+    <script src="scheduling.js"></script>
+</body>
+</html>

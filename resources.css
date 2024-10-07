@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.gallery li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery li img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.gallery li h2 {
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.gallery li p {
+    font-size: 14px;
+    color: #666;
+    padding: 5px;
+}
+
+.gallery li a {
+    text-decoration: none;
+    color: #337ab7;
+    padding: 5px;
+    display: block;
+}
+
+.gallery li a:hover {
+    color: #23527c;
+}
+
+.hotline-phone {
+    font-size: 18px;
+    font-weight: bold;
+    color: #337ab7;
+}

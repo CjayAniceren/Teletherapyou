@@ -1,0 +1,31 @@
+<!-- main.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teletherapyou</title>
+  <link rel="stylesheet" href="side.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>Teletherapyou</h2>
+    </div>
+    <ul>
+      <li><a href="journal.html" target="page-content">Daily Journal</a></li>
+      <li><a href="resources.html" target="page-content">Resource Library</a></li>
+      <li><a href="therapists.html" target="page-content">Schedule an Appointment</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- iframe to display pages -->
+    <iframe id="page-content" name="page-content" src="journal.html" frameborder="0" width="100%" height="100%" style="overflow-x: hidden"></iframe>
+  </div>
+</body>
+</html>

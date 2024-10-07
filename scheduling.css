@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+header {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent header */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Add a light border for distinction */
+}
+
+.platform-name {
+    font-size: 36px;
+    color: #ffffff; /* White color for text */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Updated to Poppins */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better visibility */
+    background: linear-gradient(135deg, #0056b3, #007bff, #0084ff, #00a1ff); /* Colorful gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    margin-bottom: 2px; /* Reduced space between title and tagline */
+}
+
+.tagline {
+    font-size: 20px; /* Slightly smaller font for tagline */
+    color: rgba(0, 123, 255, 0.8); /* Shade of blue for tagline */
+    font-family: 'Poppins', sans-serif; /* Use the same font as title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+    margin-top: 0; /* Remove default margin above tagline */
+    margin-left: 10px; /* Indent the tagline */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif; /* Use Roboto font */
+}
+
+.doctor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the cards */
+    justify-content: flex-start; /* Align to the top */
+    padding: 20px; /* Add padding */
+    width: 100%; /* Full width */
+}
+
+.doctor-card {
+    width: 80%; /* Card width */
+    max-width: 500px; /* Max width */
+    margin: 20px 0; /* Space out cards */
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.75); /* More transparent white for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text and image */
+    cursor: pointer; /* Show pointer on hover */
+}
+
+.doctor-card img {
+    max-width: 100px; /* Image size */
+    border-radius: 50%; /* Round image */
+    margin-bottom: 10px; /* Space below image */
+}
+
+.doctor-info h3 {
+    font-size: 24px; /* Doctor names */
+    color: #007bff; /* Stylish color */
+    margin: 0; /* Remove default margin */
+}
+
+.doctor-info p {
+    font-size: 16px; /* Details size */
+    color: #555; /* Readable color */
+}
+
+.scheduling-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align horizontally */
+    justify-content: center; /* Center align vertically */
+    padding: 20px; /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.75); /* More transparent white for scheduling */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Set width to 90% */
+    max-width: 500px; /* Set a max width */
+    margin: auto; /* Center it horizontally */
+}
+
+.scheduling-container h2 {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the header */
+    color: #333; /* Change the text color if needed */
+    font-size: 24px; /* Adjust the font size */
+}
+
+.scheduling-form {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for form */
+}
+
+.scheduling-form input, 
+.scheduling-form select, 
+.scheduling-form button {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    margin: 10px 0; /* Space out inputs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.scheduling-form button {
+     /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scheduling-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

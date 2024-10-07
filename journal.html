@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal App with Calendar</title>
+  <link rel="stylesheet" href="journal.css">
+</head>
+<body>
+
+  <div class="calendar-container">
+    <!-- Current date and day -->
+    <div id="current-date" class="current-date"></div>
+
+    <!-- Calendar Header (Month and Year with navigation buttons) -->
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">&#9664; Prev</button>
+      <div id="calendar-title" class="calendar-title"></div>
+      <button onclick="changeMonth(1)">Next &#9654;</button>
+    </div>
+
+    <!-- Days of the Week -->
+    <div id="calendar-days" class="calendar-days"></div>
+
+    <!-- Calendar Grid -->
+    <div id="calendar-grid" class="calendar-grid"></div>
+
+    <!-- Add Journal Entry Button -->
+    <button id="add-button" onclick="toggleEntryForm()">
+      <span class="plus-icon">+</span> Add Journal Entry
+    </button>
+
+    <!-- Journal Entry Form (Initially hidden) -->
+    <div id="journal-entry-form" class="hidden">
+      <textarea id="journalText" placeholder="Write your journal entry..."></textarea>
+      <select id="mood">
+        <option value="">Select Mood</option>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="neutral">Neutral</option>
+      </select>
+      <input type="date" id="entry-date" value="">
+      <button onclick="addJournalEntry()">Save Entry</button>
+    </div>
+
+    <!-- Recent Journal Entries Section -->
+    <div id="entries-list" class="entries-list">
+      <h3>Recent Journal Entries</h3>
+    </div>
+  </div>
+
+  <!-- Modal for displaying journal entries -->
+<div id="journal-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-date"></h2>
+      <p id="modal-entry"></p>
+      <p id="modal-mood"></p>
+    </div>
+  </div>
+
+  <script src="journal.js"></script>
+
+</body>
+</html>
