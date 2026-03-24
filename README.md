@@ -1,56 +1,60 @@
-# Teletherapyou
+# 🌈 Teletherapyou
 
-## Overview
-Teletherapyou is a static single-page style mental health web app with:
-- Daily Journal with calendar
-- Resource Library
-- Therapist directory
-- Scheduling/reservation form
+## ✨ About this project
+Teletherapyou is a polished mental wellness web experience built as a lightweight static app with an MVC pattern:
+- **Daily Journal** with calendar moods
+- **Resource Library** (mental health content + self-care tools)
+- **Therapist directory** with quick booking
+- **Appointment scheduler** by provider
 
-This version is refactored into MVC (Model-View-Controller)
+✅ Reorganized into MVC to keep data, UI, and behavior separate and maintainable.
 
-## Project Structure
+## 📁 Project structure (after MVC refactor)
 
-- `model/`
-  - `psychiatristsModel.js` - shared data and access APIs for therapist information
+**Model**
+- `model/psychiatristsModel.js` - centralized data and model helper functions
 
-- `view/`
-  - `main.html` - main layout with sidebar and iframe navigation
-  - `journal.html` - journal UI
-  - `resources.html` - resource library UI
-  - `therapists.html` - therapists list UI
-  - `scheduling.html` - appointment scheduling
-  - `css/` - styles for each view (`main.css`, `journal.css`, `resources.css`, `therapists.css`, `scheduling.css`, `side.css`)
+**View**
+- `view/index.html` (formerly `main.html`) - app shell with sidebar + iframe content
+- `view/journal.html` - journaling experience
+- `view/resources.html` - resource gallery
+- `view/therapists.html` - therapist cards
+- `view/scheduling.html` - booking form
+- `view/css/` - styles for each page (`index.css`, `journal.css`, `resources.css`, `therapists.css`, `scheduling.css`, `side.css`)
 
-- `controller/`
-  - `side.js` - sidebar navigation controller
-  - `journal.js` - journal controller (calendar and entries)
-  - `resources.js` - resources list controller
-  - `therapists.js` - therapist listing + navigation to scheduler (uses model)
-  - `scheduling.js` - appointment form controller (uses model)
+**Controller**
+- `controller/side.js` - navigation and iframe controller
+- `controller/journal.js` - journal entry/calendar behavior
+- `controller/resources.js` - resource listing behavior
+- `controller/therapists.js` - therapist card generation and navigation
+- `controller/scheduling.js` - scheduler form/confirmation logic
 
-## MVC Design
-- Model: central state/data in `model/psychiatristsModel.js`
-- View: pure HTML/CSS in `view/` and `view/css/`
-- Controller: page behavior and user interaction in `controller/`
+## 🎯 New entrypoint
+- Open `view/index.html` in browser.
+- Navigation routed through sidebar links and iframe.
+- Therapist cards route to `scheduling.html?doctorId=<id>`.
 
-## Usage
-1. Open `view/main.html` in a browser.
-2. Use sidebar links to switch between journal, resources, and therapists pages.
-3. On therapists page, click a provider card to open `scheduling.html?doctorId=<id>`.
-
-### Run via local server (recommended)
+## ⏯️ Run locally (recommended)
 ```bash
 cd /workspaces/Teletherapyou
 python3 -m http.server 8000
 ```
-Open `http://localhost:8000/view/main.html`
+Visit: `http://localhost:8000/view/index.html`
 
-## Notes
-- `controller/therapists.js` and `controller/scheduling.js` import from `model/psychiatristsModel.js` using ES modules.
-- `view/*.html` files now use `type="module"` in scripts to support imports.
+## 🛠️ Notes
+- Modern ES modules used in controllers (`type="module"` imports).
+- All psychiatrist data is in the model and consumed by controllers.
+- Pages are now MVC-friendly and easier to extend.
 
-## Future Improvements
-- Add persistence (localStorage or backend API) for journal entries and appointments.
-- Add form validation and error handling.
-- Add real authentication and server-side API endpoints.
+## 💡 Idea board (next improvements)
+- Local persistence for journal & appointment data (e.g., `localStorage`, backend API)
+- Login/auth flow and user profile
+- Calendar slot availability / booking conflict checks
+- Smooth animation and responsive transitions
+- Unit tests for controller logic (jest + DOM testing)
+
+---
+
+### 🌟 Quick status
+`main.html` renamed to `view/index.html` and README updated with a branded, more creative visual style.
+
